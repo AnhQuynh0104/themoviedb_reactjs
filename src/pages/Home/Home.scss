@@ -1,0 +1,35 @@
+@import "../../assets/scss/colors.scss";
+
+.home {
+  margin: 0 7%;
+}
+.ant-layout {
+  background-color: $white;
+}
+.jumbotron {
+  height: calc(100vh / 2.5);
+  background-image: url("../../assets/images/jumbotron.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &-inner {
+    display: flex;
+    padding: 30px 40px;
+    flex-direction: column;
+  }
+  h1.ant-typography,
+  .ant-typography {
+    color: $white;
+    font-weight: bold;
+  }
+  h1.ant-typography {
+    font-size: 45px;
+    margin-bottom: 0;
+  }
+  .ant-typography {
+    font-size: 35px;
+  }
+}
+.input-search {
+  padding-top: 40px;
+}

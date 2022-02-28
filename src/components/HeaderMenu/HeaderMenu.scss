@@ -1,0 +1,45 @@
+@import "src/assets/scss/colors.scss";
+
+.header {
+  background-color: $darkblue;
+  padding: 0 7%;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  background: $darkblue;
+  &-button {
+    font-weight: bold;
+    background-color: transparent;
+    color: $white;
+    border: none;
+    &-search {
+      color: $lightblue;
+    }
+    &:hover {
+      background-color: $darkblue;
+      color: $white;
+    }
+    &-icon {
+      font-size: 30;
+      color: $white;
+    }
+  }
+}
+.logo {
+  width: 154px;
+}
+.menu-left,
+.menu-right {
+  display: flex;
+}
+.ant-menu-light .ant-menu-item-active {
+  color: $white;
+}
+.ant-menu-item .anticon {
+  font-size: 20px;
+  font-weight: bold;
+}
+.ant-menu-horizontal {
+  border-bottom: none;
+}
