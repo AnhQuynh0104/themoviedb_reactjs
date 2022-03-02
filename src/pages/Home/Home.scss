@@ -4,12 +4,7 @@
   margin: 0 7%;
   h1.ant-typography,
   .ant-typography {
-    color: $white;
     font-weight: bold;
-  }
-  h1.ant-typography {
-    font-size: 45px;
-    margin-bottom: 0;
   }
   .jumbotron {
     height: calc(100vh / 2.5);
@@ -22,8 +17,13 @@
       padding: 30px 40px;
       flex-direction: column;
     }
+    h1.ant-typography {
+      font-size: 45px;
+      margin-bottom: 0;
+    }
     .ant-typography {
       font-size: 35px;
+      color: $white;
     }
   }
   .input-search {

@@ -1,5 +1,6 @@
 import React from "react"
 import { Menu, Layout, Button, Dropdown } from "antd"
+import { CaretDownOutlined } from "@ant-design/icons"
 import DropdownMenu from "../DropdownMenu/DropdownMenu"
 import "./SubMenu.scss"
 
@@ -16,22 +17,34 @@ const SubMenu = () => {
       <Menu className="menu" mode="horizontal">
         <Menu.Item>
           <Dropdown overlay={overview} placement="bottomLeft">
-            <Button className="menu-button">Overview</Button>
+            <Button className="menu-button">
+              Overview
+              <CaretDownOutlined />
+            </Button>
           </Dropdown>
         </Menu.Item>
         <Menu.Item>
           <Dropdown overlay={media} placement="bottomLeft">
-            <Button className="menu-button">Media</Button>
+            <Button className="menu-button">
+              Media
+              <CaretDownOutlined />
+            </Button>
           </Dropdown>
         </Menu.Item>
         <Menu.Item>
           <Dropdown overlay={share} placement="bottomLeft">
-            <Button className="menu-button">Share</Button>
+            <Button className="menu-button">
+              Share
+              <CaretDownOutlined />
+            </Button>
           </Dropdown>
         </Menu.Item>
         <Menu.Item>
           <Dropdown overlay={share} placement="bottomLeft">
-            <Button className="menu-button">Fandom</Button>
+            <Button className="menu-button">
+              Fandom
+              <CaretDownOutlined />
+            </Button>
           </Dropdown>
         </Menu.Item>
       </Menu>

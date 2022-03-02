@@ -1,12 +1,10 @@
 import { api_key, language_link } from "../constants/path"
 import request from "../utils/request"
 
-export const getListMovie = () => {
+export const getActor = (id) => {
   return request({
-    url: `/movie/popular${api_key}${language_link}`,
-    method: "get",
+    url: `/movie/${id}/credits/${api_key}${language_link}`,
+    method: "get", 
     data: {}
   })
 }
-
-

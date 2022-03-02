@@ -1,18 +1,18 @@
 import React from "react"
 import { useLocation } from "react-router-dom"
 import { Typography } from "antd"
-import { image_link } from "../../constants/path"
 import { UnorderedListOutlined, HeartOutlined, StarOutlined } from "@ant-design/icons"
+import { image_link } from "../../constants/path"
 import SubMenu from "../../components/HeaderMenu/SubMenu/SubMenu"
-import "./CardItem.scss"
 import MainLayout from "../../layouts/MainLayout"
+import "./CardItem.scss"
 
 const { Title, Text } = Typography
 
 const CardItem = () => {
 
   const location = useLocation()
-  let date = location.state.date.substring(0,4)
+  let date = location.state.release_date.substring(0,4)
   let backdrop_path = `${image_link}original${location.state.backdrop_path}`
 
   return(
@@ -23,7 +23,7 @@ const CardItem = () => {
           <img className="poster-path" src={`${image_link}original${location.state.poster_path}`}></img>
           <div className="content">
             <div className="title">
-              <Title>{location.state.name}
+              <Title>{location.state.title}
                 <span className="date">  ({date})</span>
               </Title>
             </div>

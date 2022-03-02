@@ -1,14 +1,13 @@
 import React, { useCallback } from "react"
 import { Card } from "antd"
 import { MoreOutlined } from "@ant-design/icons"
-import DEMO from "../../../assets/images/demo.jpg"
-import "./ListItem.scss"
+import "./ItemMovie.scss"
 import { image_link } from "../../../constants/path"
 import { useNavigate } from "react-router-dom"
 
 
 const { Meta } = Card
-const ListItem = (props) => {
+const ItemMovie = (props) => {
   const navigate = useNavigate()
 
   const handleOnClickCard = useCallback(() =>
@@ -16,8 +15,8 @@ const ListItem = (props) => {
       {state: {
         poster_path: props.poster_path, 
         backdrop_path: props.backdrop_path,
-        name: props.name, 
-        date: props.first_air_date, 
+        title: props.title, 
+        release_date: props.release_date, 
         overview: props.overview,
       }}, [navigate])
   )
@@ -30,9 +29,9 @@ const ListItem = (props) => {
       onClick={handleOnClickCard}
     >
       <MoreOutlined rotate={90} className="icon-more"/>
-      <Meta title={props.name} date={props.first_air_date} />
+      <Meta title={props.title} description={props.release_date} />
     </Card>
   )
 }
 
-export default ListItem
+export default ItemMovie

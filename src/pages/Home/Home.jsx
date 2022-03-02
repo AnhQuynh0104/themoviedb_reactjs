@@ -1,8 +1,7 @@
 import React from "react"
 import { Typography, Input, Col, Row, Button } from "antd"
 import SectionTitle from "../../components/SectionTitle/SectionTitle"
-import ListTvShow from "../../components/List/ListTvShow"
-import ListMovie from "../../components/List/ListMovie"
+import ListMovie from "../../components/ListMovie/ListMovie"
 import MainLayout from "../../layouts/MainLayout"
 import "./Home.scss"
 
@@ -26,10 +25,8 @@ const Home = () => {
             />
           </div>
         </div>
-        <SectionTitle name="What's Popular" section1="On TV" section2="In Theater"/>
-        <ListTvShow type="tv" />
         <SectionTitle name="Trending" section1="Today" section2="This Week"/>
-        <ListMovie type="movie"/>
+        <ListMovie />
         <div className="join-section">
           <Title>Join Today</Title>
           <Row>

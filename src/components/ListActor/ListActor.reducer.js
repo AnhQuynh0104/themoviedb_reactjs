@@ -1,29 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { fetchList } from "./List.thunk"
+import { fetchListActor } from "./ListActor.thunk"
 
 const initialState = {
-  listItem: [],
+  listActor: [],
   loading: false,
   error: "",
   submitStatus: 2
 }
 
-export const listSlice = createSlice({
-  name: "list",
+export const listActorSlice = createSlice({
+  name: "listActor",
   initialState: initialState,
   reducers: {},
   extraReducers: builder => {
     builder
-      .addCase(fetchList.pending, state => {
+      .addCase(fetchListActor.pending, state => {
         state.loading = true
       })
-      .addCase(fetchList.fulfilled, (state, action) => {
+      .addCase(fetchListActor.fulfilled, (state, action) => {
         state.loading = false
         state.error = ""
         state.submitStatus = 2
-        state.listItem = [...action.payload.results]
+        state.listActor = [...action.payload.results]
       })
-      .addCase(fetchList.rejected, (state, action) => {
+      .addCase(fetchListActor.rejected, (state, action) => {
         state.loading = false
         state.submitStatus = 2
         state.error = action.error.message
@@ -32,4 +32,4 @@ export const listSlice = createSlice({
 })
 
 
-export default listSlice.reducer
+export default listActorSlice.reducer
