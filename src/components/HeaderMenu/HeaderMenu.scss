@@ -3,29 +3,30 @@
 .header {
   background-color: $darkblue;
   padding: 0 7%;
-}
-.menu {
-  display: flex;
-  justify-content: space-between;
-  background: $darkblue;
-  &-button {
-    font-weight: bold;
-    background-color: transparent;
-    color: $white;
-    border: none;
-    &-search {
-      color: $lightblue;
-    }
-    &:hover {
-      background-color: $darkblue;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    background: $darkblue;
+    &-button {
+      font-weight: bold;
+      background-color: transparent;
       color: $white;
-    }
-    &-icon {
-      font-size: 30;
-      color: $white;
+      border: none;
+      &-search {
+        color: $lightblue;
+      }
+      &:hover {
+        background-color: $darkblue;
+        color: $white;
+      }
+      &-icon {
+        font-size: 30;
+        color: $white;
+      }
     }
   }
 }
+
 .logo {
   width: 154px;
 }

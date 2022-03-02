@@ -1,0 +1,12 @@
+@import "../../../assets/scss/colors.scss";
+.submenu-header {
+  background-color: $white;
+  height: 50px;
+  line-height: 50px;
+  .ant-menu-horizontal {
+    justify-content: center;
+  }
+  .ant-btn {
+    border: none;
+  }
+}

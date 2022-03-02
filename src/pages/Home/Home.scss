@@ -2,21 +2,6 @@
 
 .home {
   margin: 0 7%;
-}
-.ant-layout {
-  background-color: $white;
-}
-.jumbotron {
-  height: calc(100vh / 2.5);
-  background-image: url("../../assets/images/jumbotron.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &-inner {
-    display: flex;
-    padding: 30px 40px;
-    flex-direction: column;
-  }
   h1.ant-typography,
   .ant-typography {
     color: $white;
@@ -26,10 +11,61 @@
     font-size: 45px;
     margin-bottom: 0;
   }
-  .ant-typography {
-    font-size: 35px;
+  .jumbotron {
+    height: calc(100vh / 2.5);
+    background-image: url("../../assets/images/jumbotron.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-inner {
+      display: flex;
+      padding: 30px 40px;
+      flex-direction: column;
+    }
+    .ant-typography {
+      font-size: 35px;
+    }
+  }
+  .input-search {
+    padding-top: 40px;
   }
 }
-.input-search {
-  padding-top: 40px;
+.ant-layout {
+  background-color: $white;
+}
+
+.join-section {
+  background-image: url("../../assets/images/join-section-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  margin-bottom: 50px;
+  h1.ant-typography {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  .ant-typography {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+    em {
+      opacity: 0.7;
+    }
+  }
+  .btn-signup {
+    background-color: #805be7;
+    color: $white;
+    font-weight: bold;
+    border: none;
+    width: 100px;
+  }
+  &-right {
+    opacity: 0.7;
+    color: $white;
+    font-size: 16px;
+  }
+  &-left {
+    display: flex;
+    flex-direction: column;
+  }
 }

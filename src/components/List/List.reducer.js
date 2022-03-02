@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { fetchList, getListTV } from "./List.thunk"
+import { fetchList } from "./List.thunk"
 
 const initialState = {
   listItem: [],

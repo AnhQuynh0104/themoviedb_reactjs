@@ -1,0 +1,32 @@
+@import "../../assets/scss/colors.scss";
+
+.footer {
+  background-color: $darkblue;
+  padding: 60px 0;
+  display: flex;
+  h1.ant-typography {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .ant-typography {
+    color: $white;
+    font-size: 16px;
+    display: flex;
+  }
+  .logo {
+    width: 130px;
+    margin-bottom: 30px;
+  }
+  &-logo {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+  }
+  &-button {
+    text-transform: uppercase;
+    color: $lightblue;
+    font-weight: bold;
+  }
+}
