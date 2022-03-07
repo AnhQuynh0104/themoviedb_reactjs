@@ -21,7 +21,7 @@ export const listActorSlice = createSlice({
         state.loading = false
         state.error = ""
         state.submitStatus = 2
-        state.listActor = [...action.payload.results]
+        state.listActor = [...action.payload.cast]
       })
       .addCase(fetchListActor.rejected, (state, action) => {
         state.loading = false

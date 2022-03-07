@@ -11,24 +11,27 @@ const ItemMovie = (props) => {
   const navigate = useNavigate()
 
   const handleOnClickCard = useCallback(() =>
-    navigate(`/movie/${props.id}`, 
-      {state: {
-        poster_path: props.poster_path, 
-        backdrop_path: props.backdrop_path,
-        title: props.title, 
-        release_date: props.release_date, 
-        overview: props.overview,
-      }}, [navigate])
+    navigate(`/movie/${props.id}`,
+      {
+        state: {
+          id: props.id,
+          poster_path: props.poster_path,
+          backdrop_path: props.backdrop_path,
+          title: props.title,
+          release_date: props.release_date,
+          overview: props.overview,
+        }
+      }, [navigate])
   )
 
-  return(
+  return (
     <Card
       hoverable
-      cover={<img alt="example" src={`${image_link}original${props.poster_path}`}/>}
+      cover={<img alt="example" src={`${image_link}original${props.poster_path}`} />}
       className="card"
       onClick={handleOnClickCard}
     >
-      <MoreOutlined rotate={90} className="icon-more"/>
+      <MoreOutlined rotate={90} className="icon-more" />
       <Meta title={props.title} description={props.release_date} />
     </Card>
   )

@@ -6,6 +6,7 @@ import { image_link } from "../../constants/path"
 import SubMenu from "../../components/HeaderMenu/SubMenu/SubMenu"
 import MainLayout from "../../layouts/MainLayout"
 import "./CardItem.scss"
+import ListActor from "../../components/ListActor/ListActor"
 
 const { Title, Text } = Typography
 
@@ -46,9 +47,7 @@ const CardItem = () => {
           </div>
         </div>
       </div>
-      <div className="list-cast">
-        <Title>Series Cast</Title>
-      </div>
+      <ListActor id={location.state.id} />
     </MainLayout>
   )
 }

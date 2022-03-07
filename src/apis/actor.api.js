@@ -3,7 +3,7 @@ import request from "../utils/request"
 
 export const getActor = (id) => {
   return request({
-    url: `/movie/${id}/credits/${api_key}${language_link}`,
+    url: `/movie/${id}/credits${api_key}${language_link}`,
     method: "get", 
     data: {}
   })

@@ -1,0 +1,32 @@
+@import "../../../assets/scss/colors.scss";
+
+.card-actor {
+  position: relative;
+  border: none;
+  width: 150px;
+  height: 320px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  &:hover {
+    box-shadow: none;
+  }
+  .ant-card-meta-title {
+    font-weight: bold;
+    white-space: wrap;
+    &:hover {
+      color: $lightblue;
+    }
+    .ant-card-meta-detail {
+      margin-bottom: 0;
+    }
+  }
+  .ant-card-cover img {
+    border-radius: 10px;
+    height: 225px;
+    width: 150px;
+  }
+  .ant-card-body {
+    padding: 14px;
+  }
+}

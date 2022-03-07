@@ -1,6 +1,7 @@
 import React from "react"
-import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { notification } from "antd"
 import { fetchListMovie } from "./ListMovie.thunk"
 import ItemMovie from "./ItemMovie/ItemMovie"
 import "./ListMovie.scss"
@@ -12,6 +13,16 @@ const ListMovie = () => {
   useEffect(() => {
     dispatch(fetchListMovie())
   }, [])
+
+  useEffect(() => {
+    if(!loading && submitStatus === 0){
+      notification.error({
+        message: "NOTIFICATION",
+        description: "Loading images failed!",
+        placement: "topRight"
+      })
+    }
+  })
 
   return(
     <div className="list">

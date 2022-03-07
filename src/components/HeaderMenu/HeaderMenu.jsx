@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useCallback } from "react"
+import {useNavigate} from "react-router-dom"
 import { Button, Dropdown, Menu, Layout} from "antd"
 import { PlusOutlined, SearchOutlined } from "@ant-design/icons"
 import DropdownMenu from "./DropdownMenu/DropdownMenu"
@@ -14,13 +15,17 @@ const menuPeople = <DropdownMenu itemName={["Popular People"]} />
 const menuMore = <DropdownMenu itemName={["Discussions", "Leaderbroad", "Support", "API"]} />
 
 const HeaderMenu = () => {
+  const navigate = useNavigate()
+  const handleMenuOnClick = () => {
+    navigate("/")
+  }
   
   return (
     <Header className="header">  
       <Menu className="menu" mode="horizontal">
         <div className="menu-left">
           <Menu.Item>
-            <img className="logo" src={LOGO}></img>
+            <img className="logo" src={LOGO} onClick={handleMenuOnClick}></img>
           </Menu.Item>
           <Menu.Item>
             <Dropdown overlay={menuMovie} placement="bottomLeft">
